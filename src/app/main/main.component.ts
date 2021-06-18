@@ -50,6 +50,7 @@ export class MainComponent implements OnInit {
   public ready : boolean = false;
   public error : boolean = false;
 
+  echartsInstance : any;
   seriesData = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
   seriesName = '';
 
@@ -59,7 +60,7 @@ export class MainComponent implements OnInit {
     },
     radar: {
       indicator: [
-          { text : "Danceability", max: 1},
+          { text: 'Danceability', max: 1},
           { text: 'Energy', max: 1},
           { text: 'Speechiness', max: 1},
           { text: 'Acousticness', max: 1},
@@ -82,8 +83,6 @@ export class MainComponent implements OnInit {
       trigger:"axis"
     }
   };
-
-  echartsInstance : any;
 
   constructor(private featuresService: FeaturesService, private sanitizer:DomSanitizer) {
 
@@ -151,7 +150,6 @@ export class MainComponent implements OnInit {
           this.ready = true;
 
         });
-
 
     }
 
