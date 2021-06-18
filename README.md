@@ -2,7 +2,7 @@
 
 Código completo del tutorial para Crear una Spotify App en Angular + Echarts.
 
-[Parte 1](https://postcode-x.web.app/posts/crear-spotify-app-en-angular-mas-echarts)
+[Parte 1](https://postcode-x.web.app/posts/crear-spotify-app-en-angular-echarts-primera-parte)
 
 ## Nota
 
