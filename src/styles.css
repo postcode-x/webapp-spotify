@@ -1,1 +1,221 @@
-/* You can add global styles to this file, and also import other style files */
+svg#clouds {
+  position: fixed;
+  bottom: 0px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+  opacity: 0.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: aliceblue;
+  background-color: #7caed2;
+  background-image: -webkit-linear-gradient(0deg, #7caed2 0%, #403b82 100%);
+  background-image: -moz-linear-gradient(0deg, #7caed2 0%, #403b82 100%);
+  background-image: -o-linear-gradient(0deg, #7caed2 0%, #403b82 100%);
+  background-image: linear-gradient(0deg, #7caed2 0%, #403b82 100%);
+  background-repeat: no-repeat;
+  background-size: auto auto;
+}
+
+hr {
+  border-top: 1px solid gray;
+  opacity: 0.4;
+}
+
+.style-two {
+  border: 0;
+  height: 2px;
+  width: 60%;
+  background-image: linear-gradient(90deg,#efa8b0,#a89cc8,#8cc9f0);
+}
+
+.btn-sample {
+  color: #FFFFFF;
+  background-color: #5C71A7;
+  border-color: #5C71A7;
+}
+
+.btn-sample:hover,
+.btn-sample:focus,
+.btn-sample:active,
+.btn-sample.active,
+.open .dropdown-toggle.btn-sample {
+  color: #FFFFFF;
+  background-color: #403C82;
+  border-color: #5C71A7;
+}
+
+.btn-sample:active,
+.btn-sample.active,
+.open .dropdown-toggle.btn-sample {
+  background-image: none;
+}
+
+.btn-sample.disabled,
+.btn-sample[disabled],
+fieldset[disabled] .btn-sample,
+.btn-sample.disabled:hover,
+.btn-sample[disabled]:hover,
+fieldset[disabled] .btn-sample:hover,
+.btn-sample.disabled:focus,
+.btn-sample[disabled]:focus,
+fieldset[disabled] .btn-sample:focus,
+.btn-sample.disabled:active,
+.btn-sample[disabled]:active,
+fieldset[disabled] .btn-sample:active,
+.btn-sample.disabled.active,
+.btn-sample[disabled].active,
+fieldset[disabled] .btn-sample.active {
+  background-color: #5C71A7;
+  border-color: #5C71A7;
+}
+
+.btn-sample .badge {
+  color: #5C71A7;
+  background-color: #FFFFFF;
+}
+
+.active {
+  background:#5C71A7;
+  color:#000;
+}
+
+.nav-item > a:hover {
+  color: #ffff !important;
+  background-color: #5C71A7 !important;
+}
+
+.footer-style {
+  border-top: 1px solid white;
+  opacity: 0.5;
+}
+
+.about-footer a{
+    transition: color .2s ease,border-bottom .2s ease;
+    text-decoration: none !important;
+    border-bottom: dotted 1px !important;
+    color: #f2f2f2;
+}
+.about-footer a:hover {
+  transition: color .2s ease,border-bottom .2s ease;
+  border-bottom: none !important;
+  text-decoration: none !important;
+  color: white;
+}
+
+.about a{
+  transition: color .2s ease,border-bottom .2s ease;
+  text-decoration: none !important;
+  border-bottom: dotted 1px !important;
+  color: #5C71A7;
+}
+.about a:hover {
+transition: color .2s ease,border-bottom .2s ease;
+border-bottom: none !important;
+text-decoration: none !important;
+color: #403C82;
+}
+
+.opacity-1 {
+  opacity:0.2!important;
+}
+
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+.social-network a.icoFacebook:hover {
+	background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+	background-color:#33ccff;
+}
+.social-network a.icoInstagram:hover {
+	background-color:#EB87B3;
+}
+.social-network a.icoGithub:hover {
+	background-color:#0D2636;
+}
+
+.social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoInstagram:hover i, .social-network a.icoGithub:hover i {
+	color:#fff;
+}
+
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 42px;
+	height: 42px;
+	font-size:20px;
+  border: 1px solid #FFFFFF;
+
+
+}
+.social-circle li i {
+	margin:0;
+	line-height:42px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+@media (max-width: 767px) {
+  .navbar{
+      display:none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+
