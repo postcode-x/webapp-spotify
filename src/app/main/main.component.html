@@ -20,7 +20,7 @@
         <div class="col text-center text-secondary">
           <a id="analyze"></a>
           <br>
-          <h2 class="font-weight-light pt-5 text-dark">Analyze track</h2>
+          <h2 class="fw-light pt-5 text-dark">Analyze track</h2>
           <hr class="style-two" />
 
 
@@ -43,10 +43,10 @@
 
                     <div *ngIf="!isLoading ; else elseBlock">
                       <button class="btn btn-sample btn-lg btn-group" type="submit"
-                        [disabled]="!idForm.valid">Analyze</button>
+                        (disabled)="!idForm.valid">Analyze</button>
                     </div>
                     <ng-template #elseBlock>
-                      <button class="btn btn-sample btn-lg btn-group" disabled>
+                      <button style="color: white;" class="btn btn-sample btn-lg btn-group" disabled>
                         Loading...
                       </button>
                       <div class="py-3">
@@ -73,13 +73,13 @@
 
               <div class="col rounded pt-2">
 
-                <h5 class="font-weight-light">{{trackData.songName}}</h5>
+                <h5 class="fw-light">{{trackData.songName}}</h5>
 
               </div>
 
               <div class="col rounded pb-2">
 
-                <h6 class="font-weight-light">{{trackData.artistName}}</h6>
+                <h6 class="fw-light">{{trackData.artistName}}</h6>
 
               </div>
 
@@ -235,22 +235,22 @@
           <hr />
           <a id="how"></a>
           <br>
-          <h2 class="font-weight-light pt-5 text-dark">How to analyze tracks?</h2>
+          <h2 class="fw-light pt-5 text-dark">How to analyze tracks?</h2>
           <hr class="style-two" />
 
           <div class="container pb-5">
-            <h5 class="font-weight-light pt-3 text-dark">Analyzing Spotify tracks and saving results (#analysis)</h5>
+            <h5 class="fw-light pt-3 text-dark">Analyzing Spotify tracks and saving results (#analysis)</h5>
             <div class="row pt-5 pb-3 px-auto">
               <div class="col">
-                <h5 class="font-weight-light text-dark">1. Enter spotify track ID, direct link or URI and click
+                <h5 class="fw-light text-dark">1. Enter spotify track ID, direct link or URI and click
                   analyze
                 </h5>
               </div>
               <div class="col">
-                <h5 class="font-weight-light text-dark">2. Wait until the analysis is completed</h5>
+                <h5 class="fw-light text-dark">2. Wait until the analysis is completed</h5>
               </div>
               <div class="col">
-                <h5 class="font-weight-light text-dark">3. Click save to store the results as a JSON object</h5>
+                <h5 class="fw-light text-dark">3. Click save to store the results as a JSON object</h5>
               </div>
             </div>
             <a type="button" href="#analyze" class="btn btn-sample btn-lg btn-group">Get started</a>
@@ -260,62 +260,62 @@
 
           <a id="faq"></a>
           <br>
-          <h6 class="font-weight-light pt-5 text-dark">FAQ</h6>
+          <h6 class="fw-light pt-5 text-dark">FAQ</h6>
           <div class="container">
-            <h2 class="font-weight-light pt-2 text-dark">1. What is a spotify track ID, URI and direct link?</h2>
+            <h2 class="fw-light pt-2 text-dark">1. What is a spotify track ID, URI and direct link?</h2>
             <hr class="style-two" />
 
             <div class="container pb-4">
-              <h5 class="font-weight-light text-dark">Suppose you want to analyze the song <strong>Material
+              <h5 class="fw-light text-dark">Suppose you want to analyze the song <strong>Material
                   Real</strong> by
                 <strong>Allan Holdsworth</strong>.
               </h5>
-              <h5 class="font-weight-light text-dark">Its spotify ID would be: <strong>0VQoizcMq9epMT39uJHeiT</strong>
+              <h5 class="fw-light text-dark">Its spotify ID would be: <strong>0VQoizcMq9epMT39uJHeiT</strong>
               </h5>
-              <h5 class="font-weight-light text-dark">Its URI would be:
+              <h5 class="fw-light text-dark">Its URI would be:
                 <strong>spotify:track:0VQoizcMq9epMT39uJHeiT</strong>
               </h5>
-              <h5 class="font-weight-light text-dark">Its direct link would be the whole address which points to the
+              <h5 class="fw-light text-dark">Its direct link would be the whole address which points to the
                 spotify
                 website
               </h5>
             </div>
 
-            <h2 class="font-weight-light pt-2 text-dark">2. How many features are present in a track?</h2>
+            <h2 class="fw-light pt-2 text-dark">2. How many features are present in a track?</h2>
             <hr class="style-two" />
 
             <div class="container pb-4">
-              <h5 class="font-weight-light text-dark">A single spotify track can have up to 14 features:</h5>
-              <h5 class="font-weight-light text-dark">Key, Loudness, Mode, Tempo, Time signature, Popularity, Duration
+              <h5 class="fw-light text-dark">A single spotify track can have up to 14 features:</h5>
+              <h5 class="fw-light text-dark">Key, Loudness, Mode, Tempo, Time signature, Popularity, Duration
               </h5>
-              <h5 class="font-weight-light text-dark">Danceability, Energy, Speechiness, Acousticness,
+              <h5 class="fw-light text-dark">Danceability, Energy, Speechiness, Acousticness,
                 Instrumentalness,
                 Liveness
                 and Valence</h5>
             </div>
 
-            <h2 class="font-weight-light pt-2 text-dark">3. What's the meaning of those features?</h2>
+            <h2 class="fw-light pt-2 text-dark">3. What's the meaning of those features?</h2>
             <hr class="style-two" />
 
             <div class="container pb-4">
-              <h5 class="font-weight-light text-dark">You can read all about track features and their meaning <span
+              <h5 class="fw-light text-dark">You can read all about track features and their meaning <span
                   class="about"><a
                     href="https://developer.spotify.com/documentation/web-api/reference/#object-audiofeaturesobject"
                     target="_blank">here</a></span></h5>
             </div>
 
-            <h2 class="font-weight-light pt-2 text-dark">4. Can I save the analysis?</h2>
+            <h2 class="fw-light pt-2 text-dark">4. Can I save the analysis?</h2>
             <hr class="style-two" />
 
             <div class="container pb-4">
-              <h5 class="font-weight-light text-dark">Yes. You can save the results as a JSON object</h5>
+              <h5 class="fw-light text-dark">Yes. You can save the results as a JSON object</h5>
             </div>
 
-            <h2 class="font-weight-light pt-2 text-dark">5. Do you keep a history of the songs I analyze?</h2>
+            <h2 class="fw-light pt-2 text-dark">5. Do you keep a history of the songs I analyze?</h2>
             <hr class="style-two" />
 
             <div class="container pb-5">
-              <h5 class="font-weight-light text-dark">No, your privacy is our first concern. We don't track nor keep
+              <h5 class="fw-light text-dark">No, your privacy is our first concern. We don't track nor keep
                 any
                 records
                 of

@@ -1,5 +1,7 @@
 export interface TokenInterface {
-  accessToken: string
+  access_token: string,
+  token_type: string,
+  expires_in: number 
 }
 
 export interface Artists {

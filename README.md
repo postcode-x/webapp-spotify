@@ -9,33 +9,14 @@ Código completo del tutorial para Crear una Spotify App en Angular + Echarts.
 
 ## Nota
 
-Es **IMPERATIVO** tener acceso a tu propio endpoint para generar tus propias Tokens de autorización para poder usar la Spotify API. Dentro de **FeaturesService**, reemplaza `'...'` por tu endpoint. 
+Definir  apiClient y apiSecret en variables de entorno
 
-Puedes tomar este repositorio como punto de partida: [Spotify Web API](https://github.com/jwilsson/spotify-web-api-php)
-
-```features.service.ts
-/.../
-public queryAllTrackData(id: string): Observable<any> {
-
-    return this.http.get<TokenInterface>('...').pipe(
-
-      concatMap((result) => {
-
-        var headers = new HttpHeaders({
-          'Authorization': 'Bearer ' + result.accessToken
-        });
-
-        return forkJoin({
-          trackItem: this.http.get<TracksItem>(`https://api.spotify.com/v1/tracks/${id}`, { headers }),
-          trackFeatures: this.http.get<TrackFeatures>(`https://api.spotify.com/v1/audio-features/${id}`, { headers })
-        });
-
-      })
-
-    );
-
- }
-/.../
+```
+export const environment = {
+  production: true
+  apiClient: 'yourapiclient',
+  apiSecret: 'yourapisecret'
+};
 ```
 
 ![alt-text](https://github.com/postcode-x/webapp-spotify/blob/master/screenshot/final.png)

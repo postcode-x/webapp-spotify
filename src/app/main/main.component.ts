@@ -91,18 +91,19 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
+  async onSubmit() {
 
     this.ready = false;
     this.error = false;
-    var idToTest: string = this.idForm.value.idInput;
+    const  idToTest: string = this.idForm.value.idInput ?? '';
 
     if (this.regexTest(idToTest)) {
 
       var id: string = this.idCleaner(idToTest);
       this.isLoading = true;
 
-      this.featuresService.queryAllTrackData(id).subscribe(
+      const result = await (this.featuresService.queryAllTrackData(id));
+      result.subscribe(
 
         (data: any) => {
 
