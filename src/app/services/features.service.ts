@@ -36,7 +36,8 @@ export class FeaturesService {
     const data = encoder.encode(client_id + ':' + client_secret);
     const base64Encoded = base64.fromByteArray(data);
 
-    const response = await fetch('https://accounts.spotify.com/api/token', {
+    // If environment variables are set use this
+    /*const response = await fetch('https://accounts.spotify.com/api/token', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -45,7 +46,9 @@ export class FeaturesService {
           body: new URLSearchParams({
             'grant_type': 'client_credentials'
           }),
-    });
+    });*/
+
+    const response = await fetch('https://choosier-mind.000webhostapp.com/spotify/returnToken.php');
 
     if (!response.ok) {
       throw new Error(`${response.status}: ${response.statusText}`);
