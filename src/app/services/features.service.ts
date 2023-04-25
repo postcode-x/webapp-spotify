@@ -30,14 +30,16 @@ export class FeaturesService {
 
   private async getToken() : Promise<string> {
 
-    const client_id = environment.apiClient;
+    // If environment variables are set use this
+    
+    /*const client_id = environment.apiClient;
     const client_secret = environment.apiSecret;
     const encoder = new TextEncoder();
     const data = encoder.encode(client_id + ':' + client_secret);
     const base64Encoded = base64.fromByteArray(data);
 
-    // If environment variables are set use this
-    /*const response = await fetch('https://accounts.spotify.com/api/token', {
+    
+    const response = await fetch('https://accounts.spotify.com/api/token', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
